@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "module": "ESNext",
+    "target": "ES6",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "resolveJsonModule": true,
+    "lib": ["esnext", "dom"],
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "checkJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+
+  "include": ["src/*"],
+  "exclude": ["node_modules", "src/**/*.test.tsx", "src/**/*.test.ts"]
+}
