@@ -29,7 +29,7 @@ pnpm add @mx-design/config-eslint9 -D
 ### 将命令添加到 package.json 的 scripts 中
 
 ```bash
-npm pkg set scripts.eslintConfig="config-eslint9"
+npm pkg set scripts.eslintConfig="config-eslint9 config"
 ```
 
 上述操作会在你的 package.json 中添加如下命令：
@@ -37,7 +37,7 @@ npm pkg set scripts.eslintConfig="config-eslint9"
 ```javascript
  "scripts": {
     ...other command...,
-    "eslintConfig": "config-eslint9"
+    "eslintConfig": "config-eslint9 config"
   },
 ```
 

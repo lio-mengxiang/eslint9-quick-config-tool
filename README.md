@@ -29,7 +29,7 @@ pnpm add @mx-design/config-eslint9 -D
 ### Add command to scripts in package.json
 
 ```bash
-npm pkg set scripts.eslintConfig="config-eslint9"
+npm pkg set scripts.eslintConfig="config-eslint9 config"
 ```
 
 the above action will add command in your package.json like this:
@@ -37,7 +37,7 @@ the above action will add command in your package.json like this:
 ```javascript
  "scripts": {
     ...other command...,
-    "eslintConfig": "config-eslint9"
+    "eslintConfig": "config-eslint9 config"
   },
 ```
 
