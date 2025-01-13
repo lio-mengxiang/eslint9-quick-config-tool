@@ -9,7 +9,7 @@ import { runner } from './runner';
 
 export function generateConfig(program: Command, commandName: string) {
   program
-    .command(commandName)
+    .command('config')
     .description('generate eslint configuration file')
     .action(async () => {
       intro('start to configure eslint9.x config file');
