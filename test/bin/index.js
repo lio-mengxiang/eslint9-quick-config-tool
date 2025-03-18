@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-import('../esm/src/index.mjs');
+import('../../esm/src/index.mjs');

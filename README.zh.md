@@ -59,6 +59,12 @@ pnpm run eslintConfig
 
 在这一部分，我将解释我为什么以这种方式配置 ESLint。欢迎通过 Issues 提供反馈或建议。
 
+### react 配置
+
+> 将 eslint-plugin-react@7.37.2, eslint-plugin-react-hooks@5.1.0 和 eslint-plugin-react-refresh@0.4.16 安装到开发依赖中。
+
+主要添加了 `react` 和 `react-hook` 的 eslint 配置规则。
+
 ### Javascript 配置
 
 大多数介绍 ESLint 9.x 的文章和项目会展示如下的 JavaScript 配置：
@@ -181,7 +187,7 @@ export default (
 
 ## Next.js 配置
 
-对于 Next.js，我使用官方配置来添加 `next/core-web-vitals`，但移除了 `next/typescript`。实际上，`next/typescript` 是我们 TypeScript 配置中已包含的 `plugin:@typescript-eslint/recommended `规则。
+对于 Next.js，主要添加了 `@next/eslint-plugin-next@15.2.3` 来支持 Next.js 的 lint 规则。
 
 
 ## Eslint-plugin-import-x

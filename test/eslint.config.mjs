@@ -7,9 +7,7 @@ import reactPluginHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tsLint from 'typescript-eslint';
 import tailwind from 'eslint-plugin-tailwindcss';
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-import { FlatCompat } from '@eslint/eslintrc';
+import nextPlugin from '@next/eslint-plugin-next';
 
 /**
  * js lint
@@ -59,9 +57,12 @@ const reactConfig = [
     plugins: {
       'react-hooks': reactPluginHooks,
       'react-refresh': reactRefresh,
+     '@next/next': nextPlugin
     },
     rules: {
       ...reactPluginHooks.configs.recommended.rules,
+      ...nextPlugin.configs.recommended.rules,
+      ...nextPlugin.configs['core-web-vitals'].rules
     },
   },
   {
@@ -82,7 +83,16 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const nextConfig = compat.extends('next/core-web-vitals');
+/**
+ * next/core-web-vitals plugin includes react and react
+ */
+const nextConfig = [
+  ...compat.config({
+    extends: ['next'],
+    files: ['**/*.{jsx,tsx}'],
+    rules: {},
+  }),
+];
 /**
  * prettier lint
  */

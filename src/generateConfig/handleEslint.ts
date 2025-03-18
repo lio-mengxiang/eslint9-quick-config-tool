@@ -59,10 +59,10 @@ export async function handleEslint(
   }
 
   if (nextjs) {
-    result.packages.push(...[`@eslint/eslintrc${packageSeparator}3.2.0`, ...reactPackages]);
+    result.packages.push(...[`@next/eslint-plugin-next${packageSeparator}15.2.3`, ...reactPackages]);
   }
 
-  if (react) {
+  if (react && !nextjs) {
     result.packages.push(...reactPackages);
   }
 
@@ -78,6 +78,5 @@ EOF`),
   });
 
   shareData.eslint = result;
-  console.log('result: ', result);
   next();
 }

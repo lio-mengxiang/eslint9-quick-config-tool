@@ -59,6 +59,13 @@ pnpm run eslintConfig
 
 In this section, I'll explain why I configure ESLint the way I do. Welcome to provide feedback or suggestions through issues.
 
+### react Configuration
+
+> I will set eslint-plugin-react@7.37.2,
+ eslint-plugin-react-hooks@5.1.0 and eslint-plugin-react-refresh@0.4.16 in devDependencies of package.json
+
+I add react and react-hook eslint rules in it.
+
 ### Javascript Configuration
 
 > I will set eslint:9.17.0, @eslint/js@9.17.0 globals@15.14.0 in devDependencies of package.json
@@ -185,10 +192,8 @@ export default (
 
 ## Next.js Configuration
 
-> I will set @eslint/eslintrc@3.2.0, eslint-plugin-react@7.37.2,
+> I will set @next/eslint-plugin-next@15.2.3, eslint-plugin-react@7.37.2,
  eslint-plugin-react-hooks@5.1.0 and eslint-plugin-react-refresh@0.4.16 in devDependencies of package.json
-
-For nextjs, I use official configuration to add  `next/core-web-vitals`, but I remove `next/typescript`. Actually, `next/typescript` is `plugin:@typescript-eslint/recommended` rules included in our typescript configuration.
 
 
 ## Eslint-plugin-import-x
