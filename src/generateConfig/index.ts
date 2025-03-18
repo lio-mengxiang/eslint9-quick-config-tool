@@ -7,7 +7,7 @@ import { answer, JS, TS, REACT, VUE, NEXT, NEXT_JS } from './constants';
 import { handleEslint } from './handleEslint';
 import { runner } from './runner';
 
-export function generateConfig(program: Command, commandName: string) {
+export function generateConfig(program: Command) {
   program
     .command('config')
     .description('generate eslint configuration file')

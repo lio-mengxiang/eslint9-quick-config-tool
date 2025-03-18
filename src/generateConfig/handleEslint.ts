@@ -56,6 +56,7 @@ export async function handleEslint(
 
   if (prettier) {
     result.packages.push(...[`eslint-plugin-prettier${packageSeparator}5.2.1`]);
+    result.packages.push(...[`eslint-config-prettier${packageSeparator}10.1.1`]);
   }
 
   if (nextjs) {

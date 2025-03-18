@@ -3,7 +3,7 @@ import eslintPluginImportX from 'eslint-plugin-import-x';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import tsLint from 'typescript-eslint';
 import globals from 'globals';
-var a = 2;
+
 const ignoresConfig = {
   name: 'ignores',
   ignores: ['**/node_modules/', '**/.vscode/', '**/.husky/'],
@@ -22,8 +22,8 @@ const tsLintCustomConfig = {
 };
 
 const jsLintConfig = {
+  files: ['**/*.{js,mjs,cjs}'],
   rules: {
-    files: ['**/*.{js,mjs,cjs}'],
     ...jsLint.configs.recommended.rules,
   },
 };
