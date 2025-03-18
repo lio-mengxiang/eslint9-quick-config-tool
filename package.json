@@ -1,6 +1,6 @@
 {
   "name": "@mx-design/config-eslint9",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "update eslint 9.x configuration",
   "repository": "https://github.com/lio-mengxiang/eslint9-quick-config-tool",
   "keywords": [
